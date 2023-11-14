@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(0, 0, 33);
+    color: white;
+}
+
+main,
+footer{
+    padding: 2rem;
+    text-align: center;
+}
+
+h1,
+div {
+    margin-bottom: 2rem;
+}
+
+div.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.wrapper .card{
+    display: flex;
+    width: calc(100% / 6);
+    color: black;
+    padding: 2rem 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid  rgb(0, 0, 33);
+}
+
+div.wrapper .card h2 {
+    margin: auto;
+}
