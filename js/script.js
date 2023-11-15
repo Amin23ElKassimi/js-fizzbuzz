@@ -30,9 +30,11 @@ for ( let index = 1; index <= 100 ; index++){
 
 // Create Cards
 const wrapperElement = document.querySelector('div.wrapper');
+const numberCards = document.getElementById('numberCards');
 
 for ( let i = 1; i <= 100 ; i++){
     const cardElement = document.createElement('div');
+    cardElement.className = 'card';
 
     // per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz” al posto del
     if ((i % 3 === 0) && (i % 5 === 0)){
@@ -41,7 +43,7 @@ for ( let i = 1; i <= 100 ; i++){
         headingCardElement.innerHTML ='FizzBuzz';
         cardElement.appendChild(headingCardElement);
         wrapperElement.appendChild(cardElement);
-        cardElement.className = 'card bg-danger';
+        cardElement.className += ' bg-danger';
     }
 
     // per i numeri che NON sono sia multipli di 3 che di 5 stampi solo Index
@@ -51,7 +53,7 @@ for ( let i = 1; i <= 100 ; i++){
         headingCardElement.innerHTML = i;
         cardElement.appendChild(headingCardElement);
         wrapperElement.appendChild(cardElement);
-        cardElement.className = 'card bg-info';
+        cardElement.className += ' bg-info';
     }
 
     //  Solo per i multipli di 3 stampi “Fizz” al posto del numero
@@ -61,7 +63,7 @@ for ( let i = 1; i <= 100 ; i++){
         headingCardElement.innerHTML = 'Fizz';
         cardElement.appendChild(headingCardElement);
         wrapperElement.appendChild(cardElement);
-        cardElement.className = 'card bg-success';
+        cardElement.className += ' bg-success';
     }
     //  Solo per i multipli di 5 stampi Buzz al posto del numero
     if ((i % 5 === 0)  &&  !((i % 3 === 0) && (i % 5 === 0))){
@@ -70,7 +72,7 @@ for ( let i = 1; i <= 100 ; i++){
         headingCardElement.innerHTML ='Buzz';
         cardElement.appendChild(headingCardElement);
         wrapperElement.appendChild(cardElement);
-        cardElement.className = 'card bg-warning';
+        cardElement.className += ' bg-warning';
     }
 }
 
